@@ -5,9 +5,9 @@
 <title>Instituciones y Legislación Aeronáutica – Set 3 (100)</title>
 <style>
 body{font-family:Arial,sans-serif;background:#f4f4f4;padding:20px}
-.container{max-width:1100px;margin:auto;background:#fff;padding:20px;border-radius:8px}
+.container{max-width:1050px;margin:auto;background:#fff;padding:20px;border-radius:8px}
 h1{text-align:center}
-.question{margin-bottom:14px}
+.question{margin-bottom:16px}
 .options button{display:block;width:100%;margin:4px 0;padding:10px;border:1px solid #ccc;border-radius:5px;cursor:pointer;background:#eee;text-align:left}
 .options button.correct{background:#c8f7c5;border-color:#2ecc71}
 .options button.wrong{background:#f7c5c5;border-color:#e74c3c}
@@ -20,7 +20,7 @@ h1{text-align:center}
 
 <body>
 <div class="container">
-<h1>Instituciones y Legislación Aeronáutica – Set 3 (100 preguntas)</h1>
+<h1>Instituciones y Legislación Aeronáutica – Test (Set 3 · 100)</h1>
 <div id="score">Aciertos: 0 | Errores: 0</div>
 <div id="quiz"></div>
 <button id="finish" onclick="finishTest()">Finalizar test</button>
@@ -29,117 +29,97 @@ h1{text-align:center}
 
 <script>
 const questions = [
-/* 1–20 Convenio de Chicago */
-{q:"1. El principio de soberanía aérea implica que:",a:["El espacio aéreo es internacional","El Estado ejerce control total","OACI gestiona el espacio aéreo","EUROCONTROL es responsable"],c:1,e:"Soberanía completa y exclusiva."},
-{q:"2. El Convenio de Chicago se aplica a:",a:["Aeronaves civiles","Aeronaves militares","Todas las aeronaves","Solo aerolíneas"],c:0,e:"Excluye aeronaves de Estado."},
-{q:"3. Las aeronaves de Estado comprenden:",a:["Privadas","Comerciales","Militares, aduaneras y policiales","Charter"],c:2,e:"Definición legal."},
-{q:"4. El derecho de sobrevuelo sin aterrizar es:",a:["2ª libertad","1ª libertad","3ª libertad","5ª libertad"],c:1,e:"Primera libertad del aire."},
-{q:"5. La 3ª libertad permite:",a:["Sobrevolar","Desembarcar pasajeros","Embarcar pasajeros","Cabotaje"],c:2,e:"Desde el Estado propio a otro."},
-{q:"6. El cabotaje corresponde a:",a:["5ª libertad","6ª libertad","8ª y 9ª libertades","7ª libertad"],c:2,e:"Tráfico interno."},
-{q:"7. Las libertades del aire se conceden mediante:",a:["OACI","UE","Convenios bilaterales","NOTAM"],c:2,e:"Acuerdos entre Estados."},
-{q:"8. La nacionalidad de la aeronave viene dada por:",a:["Propietario","Estado de matrícula","Fabricante","Operador"],c:1,e:"Registro estatal."},
-{q:"9. Una aeronave no puede estar matriculada en:",a:["Dos Estados","Un Estado","Estado OACI","Estado UE"],c:0,e:"Prohibición expresa."},
-{q:"10. El certificado de aeronavegabilidad lo expide:",a:["Fabricante","OACI","Estado de matrícula","Operador"],c:2,e:"Responsabilidad estatal."},
+/* 1–20 Marco internacional */
+{q:"1. El artículo 1 del Convenio de Chicago establece:",a:["Libertad del aire","Soberanía completa y exclusiva","Uso compartido del espacio aéreo","Gestión OACI"],c:1,e:"Soberanía plena del Estado."},
+{q:"2. El artículo 3 del Convenio de Chicago excluye:",a:["Aeronaves civiles","Aeronaves de Estado","Aeronaves comerciales","Aeronaves privadas"],c:1,e:"Militares, aduaneras y policiales."},
+{q:"3. Las aeronaves de Estado que vuelan sobre otro Estado deben:",a:["Notificar","Solicitar autorización","Publicar NOTAM","Nada"],c:1,e:"Permiso previo."},
+{q:"4. El principio de no discriminación se aplica a:",a:["Aeronaves nacionales","Aeronaves extranjeras","Todas las aeronaves civiles","Solo UE"],c:2,e:"Igualdad de trato."},
+{q:"5. El registro de aeronaves corresponde a:",a:["OACI","Estado de matrícula","EASA","EUROCONTROL"],c:1,e:"Responsabilidad estatal."},
+{q:"6. Una aeronave no puede estar matriculada en:",a:["Dos Estados","Un Estado","Estado soberano","Estado OACI"],c:0,e:"Prohibición expresa."},
+{q:"7. El certificado de aeronavegabilidad lo expide:",a:["Fabricante","Estado","OACI","Aerolínea"],c:1,e:"Autoridad del Estado."},
+{q:"8. Las normas sobre nacionalidad se recogen en:",a:["Anexo 1","Anexo 7","Anexo 8","Anexo 11"],c:1,e:"Marcas y matrículas."},
+{q:"9. El Anexo 6 regula:",a:["Licencias","Operación de aeronaves","ATS","Cartas"],c:1,e:"Operaciones."},
+{q:"10. El Anexo 13 trata sobre:",a:["Seguridad","Accidentes","Meteorología","Licencias"],c:1,e:"Investigación."},
 
-/* 11–30 OACI y Anexos */
-{q:"11. La OACI es una agencia:",a:["Privada","Regional","Especializada de la ONU","Militar"],c:2,e:"Organismo ONU."},
-{q:"12. La sede de la OACI está en:",a:["París","Ginebra","Montreal","Nueva York"],c:2,e:"Dato clásico."},
-{q:"13. La estructura básica de la OACI incluye:",a:["Asamblea, Consejo y Secretaría","Consejo y Agencia","Asamblea y Tribunal","Secretaría y Comisión"],c:0,e:"Estructura formal."},
-{q:"14. Las SARPs se recogen en:",a:["Documentos","Circulares","Anexos","AIP"],c:2,e:"Normas OACI."},
-{q:"15. Un Estado que no cumple una SARP debe:",a:["Ignorarla","Solicitar permiso","Notificar diferencia","Modificar el Anexo"],c:2,e:"Obligación formal."},
-{q:"16. El Anexo 1 regula:",a:["Licencias","Operaciones","Cartas","ATS"],c:0,e:"Licencias del personal."},
-{q:"17. El Anexo 6 trata sobre:",a:["Aeronavegabilidad","Operación de aeronaves","Investigación","Aeródromos"],c:1,e:"Operaciones."},
-{q:"18. El Anexo 11 regula:",a:["ATS","AIS","MET","Cartas"],c:0,e:"Servicios de tránsito aéreo."},
-{q:"19. El Anexo 13 se refiere a:",a:["Seguridad","Accidentes","Licencias","Meteorología"],c:1,e:"Investigación técnica."},
-{q:"20. OACI no tiene capacidad para:",a:["Auditar","Emitir SARPs","Sancionar Estados","Coordinar"],c:2,e:"No sanciona."},
+/* 11–30 Sistema europeo */
+{q:"11. El derecho primario de la UE incluye:",a:["Reglamentos","Tratados","Directivas","Decisiones"],c:1,e:"Tratados constitutivos."},
+{q:"12. El derecho secundario incluye:",a:["Tratados","Reglamentos","Convenios OACI","AIP"],c:1,e:"Normativa derivada."},
+{q:"13. El SES se apoya en:",a:["Bloques funcionales","Estados aislados","Espacios nacionales","Convenios OACI"],c:0,e:"FABs."},
+{q:"14. Los FABs buscan:",a:["Control militar","Optimizar flujos","Eliminar soberanía","Unificar matrículas"],c:1,e:"Gestión por tráfico."},
+{q:"15. EASA no es competente en:",a:["Certificación","Licencias piloto","ATS nacional","Seguridad técnica"],c:2,e:"ATS es estatal."},
+{q:"16. El Reglamento (UE) 373/2017 regula:",a:["Fatiga y estrés","Licencias","Cartas","ATFCM"],c:0,e:"Requisitos comunes."},
+{q:"17. La supervisión europea se basa en:",a:["Auditorías","Autodeclaración","Sanciones","NOTAM"],c:0,e:"Oversight."},
+{q:"18. El Network Manager optimiza:",a:["Seguridad","Capacidad y flujos","Meteorología","Licencias"],c:1,e:"Gestión de red."},
+{q:"19. Las tasas de ruta europeas se gestionan por:",a:["EASA","EUROCONTROL","OACI","Comisión UE"],c:1,e:"CRCO."},
+{q:"20. El Cielo Único no elimina:",a:["Fragmentación","Fronteras políticas","Ineficiencias","Duplicidades"],c:1,e:"Punto trampa."},
 
-/* 21–40 Sistema europeo */
-{q:"21. El derecho primario de la UE incluye:",a:["Reglamentos","Directivas","Tratados","Decisiones"],c:2,e:"Base jurídica."},
-{q:"22. Un reglamento UE es:",a:["Orientativo","Aplicable directamente","Requiere transposición","Opcional"],c:1,e:"Primacía UE."},
-{q:"23. Una directiva UE:",a:["Se aplica directamente","Requiere transposición","No es obligatoria","Sustituye leyes"],c:1,e:"Clave de examen."},
-{q:"24. El SES busca principalmente:",a:["Eliminar fronteras","Reducir fragmentación","Crear aerolíneas","Control militar"],c:1,e:"Objetivo central."},
-{q:"25. Los FABs se crean para:",a:["Control político","Optimizar flujos","Eliminar Estados","Unificar matrículas"],c:1,e:"Gestión por tráfico."},
-{q:"26. EUROCONTROL se encarga de:",a:["Certificar pilotos","Gestión de red","Legislar","Publicar AIP"],c:1,e:"ATM europeo."},
-{q:"27. El Network Manager pertenece a:",a:["EASA","EUROCONTROL","OACI","Comisión UE"],c:1,e:"Gestión red."},
-{q:"28. Las tasas de ruta europeas se gestionan por:",a:["EASA","EUROCONTROL","OACI","Estados"],c:1,e:"CRCO."},
-{q:"29. EASA es responsable de:",a:["ATS","Certificación y seguridad","AIS","Meteorología"],c:1,e:"Agencia UE."},
-{q:"30. EASA no regula directamente:",a:["Diseño","Mantenimiento","ATS nacional","Licencias piloto"],c:2,e:"Competencia estatal."},
+/* 21–40 Instituciones */
+{q:"21. La Conferencia Europea de Aviación Civil es:",a:["Agencia UE","Organismo intergubernamental","Empresa","Asociación privada"],c:1,e:"CEAC."},
+{q:"22. CEAC tiene funciones de:",a:["Regulación","Coordinación","Certificación","Control"],c:1,e:"No regula."},
+{q:"23. IATA no es:",a:["Privada","Asociación de aerolíneas","Regulador","Internacional"],c:2,e:"No regula."},
+{q:"24. IFATCA representa:",a:["Pilotos","Controladores","Ingenieros","Fabricantes"],c:1,e:"Federación ATC."},
+{q:"25. IFALPA actúa como:",a:["Proveedor","Sindicato","Representación profesional","Autoridad"],c:2,e:"Pilotos."},
+{q:"26. CANSO agrupa a:",a:["Aerolíneas","Proveedores SNA","Autoridades","Fabricantes"],c:1,e:"ANSPs."},
+{q:"27. CIAIAC es independiente de:",a:["ENAIRE","Ministerio","Operadores","Todas"],c:3,e:"Independencia funcional."},
+{q:"28. La investigación de accidentes no busca:",a:["Causas","Recomendaciones","Responsabilidad penal","Prevención"],c:2,e:"No punitiva."},
+{q:"29. AESA depende de:",a:["ENAIRE","MITMA","EASA","EUROCONTROL"],c:1,e:"Ministerio español."},
+{q:"30. ENAIRE es una entidad:",a:["Privada","Pública empresarial","Autoridad","Agencia UE"],c:1,e:"Entidad pública."},
 
-/* 41–60 España */
-{q:"31. AESA es:",a:["Proveedor","Autoridad nacional","Agencia UE","Empresa"],c:1,e:"Autoridad española."},
-{q:"32. AESA depende de:",a:["ENAIRE","MITMA","EASA","EUROCONTROL"],c:1,e:"Ministerio."},
-{q:"33. ENAIRE es:",a:["Autoridad","Proveedor SNA","Agencia UE","Privada"],c:1,e:"Proveedor servicios."},
-{q:"34. AIS en España depende de:",a:["AESA","ENAIRE","EASA","OACI"],c:1,e:"Servicio AIS."},
-{q:"35. El AIP es:",a:["Reglamento","Publicación AIS","NOTAM","Circular"],c:1,e:"Información permanente."},
-{q:"36. El ciclo AIRAC es de:",a:["14 días","28 días","56 días","90 días"],c:1,e:"Dato fijo."},
-{q:"37. NOTAM se usa para:",a:["Información permanente","Cambios urgentes","Cartas base","Leyes"],c:1,e:"Urgente/temporal."},
-{q:"38. Una AIC es:",a:["NOTAM","Circular informativa","Reglamento","Carta"],c:1,e:"Información explicativa."},
-{q:"39. SUP AIP contiene:",a:["Cambios urgentes","Cambios temporales largos","Cambios permanentes","Reglamentos"],c:1,e:"Suplemento."},
-{q:"40. NOTAM debe cancelarse cuando:",a:["Se publica AIP","Pierde vigencia","Pasa AIRAC","Se emite otro"],c:1,e:"Fin de validez."},
+/* 41–60 Legislación operativa */
+{q:"31. El Doc 4444 contiene:",a:["SARPs","PANS-ATM","Circulares","Reglamentos UE"],c:1,e:"Procedimientos."},
+{q:"32. Los PANS no tienen:",a:["Carácter práctico","Carácter técnico","Carácter obligatorio","Carácter legal"],c:3,e:"No son leyes."},
+{q:"33. El plan de vuelo forma parte de:",a:["AIS","ATS","MET","CNS"],c:1,e:"Gestión tránsito."},
+{q:"34. El mensaje RFP sirve para:",a:["Cancelar","Sustituir plan","Demorar","Informar"],c:1,e:"Replacement."},
+{q:"35. ATFCM actúa:",a:["Antes del vuelo","Durante","Después","En todas"],c:3,e:"Gestión completa."},
+{q:"36. El AIP GEN contiene:",a:["Información general","Cartas","Procedimientos","NOTAM"],c:0,e:"Parte general."},
+{q:"37. El AIP ENR contiene:",a:["Aeródromos","Ruta","General","Cartas visuales"],c:1,e:"En-route."},
+{q:"38. El AIP AD se refiere a:",a:["Rutas","Aeródromos","General","Militar"],c:1,e:"Aerodromes."},
+{q:"39. Una AIC no tiene:",a:["Valor informativo","Carácter explicativo","Carácter urgente","Carácter permanente"],c:2,e:"No urgente."},
+{q:"40. El principio AIRAC garantiza:",a:["Uniformidad","Actualización sincronizada","Urgencia","Escala"],c:1,e:"Fechas comunes."},
 
-/* 61–80 Seguridad */
-{q:"41. SMS significa:",a:["Safety Management System","Security Manual System","Safety Monitoring Service","Standard Management System"],c:0,e:"Gestión de seguridad."},
+/* 61–80 Seguridad y supervisión */
+{q:"41. El SMS se basa en:",a:["Reacción","Gestión proactiva","Sanción","Cumplimiento ciego"],c:1,e:"Gestión de riesgos."},
 {q:"42. El hazard es:",a:["Riesgo","Peligro","Consecuencia","Evento"],c:1,e:"Definición clave."},
-{q:"43. El risk resulta de:",a:["Peligro x severidad","Probabilidad x severidad","Error x fallo","Evento x daño"],c:1,e:"Modelo SMS."},
-{q:"44. Safety I se centra en:",a:["Éxitos","Fallos","Resiliencia","Flexibilidad"],c:1,e:"Visión tradicional."},
-{q:"45. Safety II se centra en:",a:["Errores","Cumplimiento","Funcionamiento normal","Sanción"],c:2,e:"Enfoque moderno."},
-{q:"46. Just Culture implica:",a:["Impunidad","Castigo","Responsabilidad equilibrada","Anonimato total"],c:2,e:"Clave ENAIRE."},
-{q:"47. La supervisión continua se denomina:",a:["Oversight","Audit","Review","Check"],c:0,e:"Término oficial."},
-{q:"48. Un incumplimiento deliberado:",a:["Está protegido","No tiene consecuencias","Genera responsabilidad","Es aceptable"],c:2,e:"Límite JC."},
-{q:"49. La responsabilidad última de la seguridad recae en:",a:["Proveedor","Piloto","Estado","OACI"],c:2,e:"Estado soberano."},
+{q:"43. El risk resulta de:",a:["Peligro x probabilidad","Probabilidad x severidad","Evento x daño","Error x fallo"],c:1,e:"Concepto SMS."},
+{q:"44. La just culture fomenta:",a:["Castigo","Reporte","Ocultación","Sanción"],c:1,e:"Cultura abierta."},
+{q:"45. Un incumplimiento deliberado implica:",a:["Protección","Impunidad","Responsabilidad","Anonimato"],c:2,e:"Límite Just Culture."},
+{q:"46. La supervisión continua implica:",a:["Auditorías","Seguimiento","Inspecciones","Todas"],c:3,e:"Oversight."},
+{q:"47. La competencia sancionadora aérea es:",a:["Judicial","Administrativa","Privada","Internacional"],c:1,e:"Administrativa."},
+{q:"48. Las licencias ATC requieren:",a:["Renovación","Validez indefinida","Transferencia","Nacionalidad"],c:0,e:"Requisitos periódicos."},
+{q:"49. Un proveedor puede perder certificación por:",a:["Costes","Incumplimientos","Tráfico","Meteorología"],c:1,e:"Supervisión."},
 {q:"50. La seguridad prima sobre:",a:["Capacidad","Coste","Eficiencia","Todas"],c:3,e:"Principio rector."},
 
 /* 81–100 Trampas finas */
-{q:"51. El Doc 4444 contiene:",a:["SARPs","PANS-ATM","Reglamentos UE","Circulares"],c:1,e:"Procedimientos."},
-{q:"52. Los PANS:",a:["Son leyes","Complementan SARPs","Son opcionales","Sustituyen anexos"],c:1,e:"Aplicación práctica."},
-{q:"53. El plan de vuelo se regula en:",a:["Anexo 2","Anexo 11","Doc 4444","Anexo 15"],c:2,e:"PANS-ATM."},
-{q:"54. RFP significa:",a:["Revised Flight Plan","Replacement Flight Plan","Request Flight Plan","Route Flight Plan"],c:1,e:"Sustitución."},
-{q:"55. ATFCM actúa:",a:["Solo antes del vuelo","Solo en vuelo","Solo después","En todas las fases"],c:3,e:"Gestión integral."},
-{q:"56. CANSO agrupa a:",a:["Aerolíneas","Proveedores SNA","Autoridades","Pilotos"],c:1,e:"ANSPs."},
-{q:"57. CEAC es:",a:["Agencia UE","Organismo intergubernamental","Empresa","Sindicato"],c:1,e:"Coordinación."},
-{q:"58. IFALPA representa:",a:["Controladores","Pilotos","Ingenieros","Fabricantes"],c:1,e:"Federación pilotos."},
-{q:"59. IFATCA representa:",a:["Pilotos","Controladores","Aerolíneas","Autoridades"],c:1,e:"ATC."},
-{q:"60. CIAIAC investiga:",a:["Sanciones","Accidentes","Licencias","ATS"],c:1,e:"Investigación técnica."},
-{q:"61. La investigación técnica busca:",a:["Asignar culpa","Prevenir","Sancionar","Indemnizar"],c:1,e:"No punitiva."},
-{q:"62. Las recomendaciones de seguridad son:",a:["Obligatorias","Orientativas","Sancionadoras","Reglamentarias"],c:1,e:"No vinculantes."},
-{q:"63. El derecho aeronáutico es:",a:["Público","Privado","Mixto","Local"],c:2,e:"Mixto."},
-{q:"64. La normativa UE tiene:",a:["Igual rango","Primacía","Rango inferior","Carácter opcional"],c:1,e:"Primacía."},
-{q:"65. El incumplimiento normativo genera:",a:["Nada","Responsabilidad","Solo advertencia","Solo penal"],c:1,e:"Administrativa."},
-{q:"66. La proporcionalidad implica:",a:["Sanción máxima","Adecuación a gravedad","Impunidad","Automatismo"],c:1,e:"Derecho administrativo."},
-{q:"67. El objetivo del oversight es:",a:["Castigar","Detectar desviaciones","Reducir personal","Cerrar proveedores"],c:1,e:"Supervisión."},
-{q:"68. El Estado del operador se define por:",a:["Matrícula","Actividad principal","Fabricante","Destino"],c:1,e:"Definición OACI."},
-{q:"69. El Estado de diseño es:",a:["Fabricante","Diseñador","Operador","Certificador"],c:1,e:"Anexo 8."},
-{q:"70. El Estado de fabricación es:",a:["Diseñador","Productor","Operador","Certificador"],c:1,e:"Distinto del diseño."},
-{q:"71. La cooperación internacional es necesaria por:",a:["Economía","Naturaleza transfronteriza","Política","Coste"],c:1,e:"Fundamento OACI."},
-{q:"72. La armonización normativa busca:",a:["Uniformidad total","Compatibilidad","Centralización","Eliminar soberanía"],c:1,e:"Concepto clave."},
-{q:"73. Un proveedor no puede:",a:["Operar","Prestar servicios","Autocertificarse","Mantener sistemas"],c:2,e:"Trampa típica."},
-{q:"74. La autoridad competente dicta:",a:["Procedimientos internos","Normas obligatorias","Turnos","Cartas"],c:1,e:"Función reguladora."},
-{q:"75. El marco legal aeronáutico es dinámico por:",a:["Tecnología","Tráfico","Política","Todas"],c:3,e:"Evolución constante."},
-{q:"76. La seguridad operacional es:",a:["Reactiva","Proactiva","Punitiva","Estática"],c:1,e:"SMS."},
-{q:"77. Un fallo sistémico indica:",a:["Error humano","Problema organizativo","Mala fe","Azar"],c:1,e:"Modelo moderno."},
-{q:"78. La seguridad es responsabilidad:",a:["Individual","Estatal","Organizacional","Compartida"],c:3,e:"Shared responsibility."},
-{q:"79. El objetivo del marco institucional es:",a:["Control","Orden","Seguridad operacional","Eficiencia"],c:2,e:"Clave examen."},
-{q:"80. La finalidad última del sistema aeronáutico es:",a:["Facilitar transporte","Reducir costes","Garantizar seguridad","Aumentar tráfico"],c:2,e:"Pregunta final."} 
-{q:"81. El principio de responsabilidad estatal implica que:",a:["OACI garantiza la seguridad","El operador es el único responsable","El Estado es responsable último del sistema","EUROCONTROL asume la supervisión"],c:2,e:"El Estado conserva la responsabilidad final."},
-{q:"82. Un Estado contratante OACI debe:",a:["Aplicar todos los Anexos sin excepción","Notificar diferencias cuando existan","Solicitar permiso a OACI para regular","Delegar toda supervisión"],c:1,e:"Obligación de notificación."},
-{q:"83. El concepto de Estado de matrícula es clave para:",a:["Responsabilidad penal","Certificación y supervisión","Derechos de tráfico","Gestión de capacidad"],c:1,e:"Anexos 6 y 8."},
-{q:"84. El Estado del operador se diferencia del de matrícula porque:",a:["Nunca coinciden","Se basa en la actividad principal","Depende del fabricante","Es solo europeo"],c:1,e:"Definición OACI."},
-{q:"85. La seguridad jurídica en aviación se basa en:",a:["Uniformidad técnica","Compatibilidad normativa","Aplicación coherente","Todas"],c:3,e:"Pregunta síntesis."},
-{q:"86. Un proveedor ATS certificado debe:",a:["Autoregularse","Cumplir requisitos continuos","Publicar AIP","Emitir reglamentos"],c:1,e:"Supervisión continua."},
-{q:"87. El marco institucional europeo busca principalmente:",a:["Centralizar poder","Reducir costes","Aumentar seguridad y eficiencia","Eliminar soberanía"],c:2,e:"Objetivo SES."},
-{q:"88. El control normativo de AESA se ejerce mediante:",a:["Auditorías y sanciones","NOTAM","Cartas","Convenios"],c:0,e:"Función supervisora."},
-{q:"89. Un incumplimiento leve puede derivar en:",a:["Proceso penal","Recomendación","Medida correctora","Suspensión inmediata"],c:2,e:"Proporcionalidad."},
-{q:"90. El régimen sancionador aeronáutico es:",a:["Automático","Discrecional","Graduado","Internacional"],c:2,e:"Principio básico."},
-{q:"91. El principio de proporcionalidad implica:",a:["Igual sanción siempre","Adecuación a la gravedad","Ausencia de sanción","Sanción máxima"],c:1,e:"Derecho administrativo."},
-{q:"92. La competencia normativa en seguridad aérea corresponde a:",a:["Proveedores","Autoridades","Operadores","Asociaciones"],c:1,e:"Autoridad competente."},
-{q:"93. El objetivo del oversight es:",a:["Sancionar","Detectar desviaciones","Reducir personal","Eliminar proveedores"],c:1,e:"Supervisión."},
-{q:"94. La normativa aeronáutica es transversal porque afecta a:",a:["Pilotos","ATC","Operadores","Todas las anteriores"],c:3,e:"Sistema completo."},
-{q:"95. La cooperación internacional en aviación es necesaria por:",a:["Economía","Naturaleza transfronteriza","Tecnología","Política"],c:1,e:"Fundamento OACI."},
-{q:"96. Un fallo sistémico indica:",a:["Error humano aislado","Problema organizativo","Mala fe","Falta de formación"],c:1,e:"Modelo moderno."},
-{q:"97. El enfoque actual de seguridad es:",a:["Reactivo","Punitivo","Proactivo","Correctivo"],c:2,e:"SMS."},
-{q:"98. La legislación aeronáutica moderna prioriza:",a:["Producción","Tráfico","Seguridad operacional","Velocidad"],c:2,e:"Clave examen."},
-{q:"99. El marco legal aeronáutico es dinámico debido a:",a:["Cambios tecnológicos","Cambios políticos","Cambios climáticos","Todas"],c:3,e:"Evolución constante."},
-{q:"100. La finalidad última del sistema institucional aeronáutico es:",a:["Ordenar el tráfico","Facilitar el transporte","Garantizar seguridad y regularidad","Reducir costes"],c:2,e:"Pregunta final tipo ENAIRE."}
+{q:"51. Un reglamento UE se aplica:",a:["Tras transposición","Directamente","Con AIP","Con NOTAM"],c:1,e:"Aplicación directa."},
+{q:"52. Una directiva UE se aplica:",a:["Directamente","Con transposición","Nunca","Con NOTAM"],c:1,e:"Requiere ley nacional."},
+{q:"53. Un Estado puede ser sancionado por la UE por:",a:["Incumplir OACI","Incumplir reglamentos UE","Incumplir AIP","Incumplir NOTAM"],c:1,e:"Derecho UE."},
+{q:"54. El principio de subsidiariedad aplica a:",a:["UE","OACI","Estados","ENAIRE"],c:0,e:"Derecho europeo."},
+{q:"55. OACI no tiene potestad para:",a:["Auditar","Emitir SARPs","Sancionar Estados","Coordinar"],c:2,e:"No sanciona."},
+{q:"56. USOAP es:",a:["Programa auditor","Convenio","Reglamento","Anexo"],c:0,e:"Auditorías OACI."},
+{q:"57. Las auditorías OACI evalúan:",a:["Cumplimiento","Rendimiento económico","Capacidad","Costes"],c:0,e:"Implementación SARPs."},
+{q:"58. Una diferencia no notificada supone:",a:["Error formal","Riesgo internacional","Nada","Sanción automática"],c:1,e:"Falta de transparencia."},
+{q:"59. El Estado del operador es:",a:["Estado matrícula","Estado base","Estado principal de actividad","Estado de destino"],c:2,e:"Definición clave."},
+{q:"60. El Estado de diseño es:",a:["Fabricante","Certificador","Diseñador","Operador"],c:2,e:"Anexo 8."},
+{q:"61. El Estado de fabricación es:",a:["Quien diseña","Quien produce","Quien certifica","Quien opera"],c:1,e:"Diferente del diseño."},
+{q:"62. Las responsabilidades de seguridad se reparten entre:",a:["OACI","Estados","Operadores","Todas"],c:3,e:"Sistema multinivel."},
+{q:"63. El control jurisdiccional corresponde a:",a:["OACI","UE","Estados","CANSO"],c:2,e:"Competencia nacional."},
+{q:"64. La normativa aeronáutica es:",a:["Estática","Técnica","Generalista","Local"],c:1,e:"Muy técnica."},
+{q:"65. La armonización busca:",a:["Uniformidad absoluta","Compatibilidad","Centralización","Eliminación soberanía"],c:1,e:"Compatibilidad."},
+{q:"66. Un proveedor ANSP no puede:",a:["Prestar servicios","Publicar NOTAM","Autocertificarse","Operar sistemas"],c:2,e:"Trampa típica."},
+{q:"67. La autoridad competente define:",a:["Procedimientos internos","Regulación obligatoria","Turnos","Cartas"],c:1,e:"Función reguladora."},
+{q:"68. La responsabilidad última de seguridad recae en:",a:["Proveedor","Piloto","Estado","OACI"],c:2,e:"Estado soberano."},
+{q:"69. El marco legal aeronáutico combina:",a:["Derecho público","Derecho privado","Ambos","Ninguno"],c:2,e:"Mixto."},
+{q:"70. La aviación civil internacional requiere:",a:["Uniformidad técnica","Compatibilidad jurídica","Cooperación","Todas"],c:3,e:"Pregunta síntesis."},
+{q:"71. Una infracción grave puede implicar:",a:["Advertencia","Multa","Suspensión","Todas"],c:3,e:"Régimen sancionador."},
+{q:"72. La publicación DOUE es:",a:["Obligatoria","Informativa","Opcional","Nacional"],c:0,e:"Validez UE."},
+{q:"73. El AIP no es:",a:["Oficial","Obligatorio","Permanente","Reglamentario"],c:3,e:"No es ley."},
+{q:"74. NOTAM es:",a:["Reglamento","Información operativa","Ley","Anexo"],c:1,e:"Clave."},
+{q:"75. El cumplimiento normativo persigue:",a:["Eficiencia","Seguridad","Rentabilidad","Velocidad"],c:1,e:"Finalidad última."},
+{q:"76. La normativa aeronáutica se actualiza mediante:",a:["AIRAC","Reglamentos","Anexos","Todas"],c:3,e:"Múltiples vías."},
+{q:"77. El incumplimiento sistemático indica fallo de:",a:["Persona","Sistema","Equipo","Meteorología"],c:1,e:"Visión moderna."},
+{q:"78. La seguridad es responsabilidad:",a:["Individual","Organizacional","Estatal","Compartida"],c:3,e:"Shared responsibility."},
+{q:"79. El objetivo final del marco institucional es:",a:["Control","Orden","Seguridad operacional","Eficiencia"],c:2,e:"Clave ENAIRE."},
+{q:"80. La legislación aeronáutica moderna es:",a:["Reactiva","Proactiva","Punitiva","Estática"],c:1,e:"Cierre conceptual."}
 ];
 
 let score=0, errors=0;
